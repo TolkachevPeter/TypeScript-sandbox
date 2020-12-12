@@ -1,24 +1,26 @@
-import React, {useState} from 'react';
+import React, { useRef} from 'react';
 
 export const TodoForm: React.FC = () => {
-    const [title, setTitle] = useState<string>('')
+    // const [title, setTitle] = useState<string>('')
+    const ref = useRef(null)
 
-    const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setTitle(event.target.value)
-    }
+    // const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    //     setTitle(event.target.value)
+    // }
 
     const onPressHandler = (event: React.KeyboardEvent) => {
         if(event.key === "Enter") {
-            console.log(title);
-            setTitle('')
+            // console.log(title);
+            // setTitle('')
         }
     }
 
     return (
         <div className="input-field mtp2">
         <input 
-        onChange={changeHandler}
-        value={title} 
+        // onChange={changeHandler}
+        // value={title} 
+        ref={ref}
         type="text" 
         className="text" 
         id='title' 
