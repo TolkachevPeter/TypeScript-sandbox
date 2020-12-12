@@ -1,12 +1,13 @@
 import React from 'react';
 import { Navbar } from './components/Navbar';
+import { TodoForm } from './components/TodoForm';
 
 function App() {
   return( 
   <div> 
   <Navbar/>
   <div className="container">
-    <h1 className="">Test</h1>
+    <TodoForm/>
   </div>
   </div>)
 }
