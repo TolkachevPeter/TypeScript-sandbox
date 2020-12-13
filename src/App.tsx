@@ -18,13 +18,21 @@ function App() {
     setTodos(prev => [newTodo, ...prev])
   }
 
+  const toggleHandler = (id: number) => {
+  }
+  const removeHandler = (id: number) => {
+  }
   return( 
   <div> 
   <Navbar/>
   <div className="container">
     <TodoForm onAdd = {addHandler}/>
 
-    <TodoList todos={todos}/>
+    <TodoList 
+    todos={todos}
+    onToggle={toggleHandler}
+    onRemove={removeHandler}
+    />
   </div>
   </div>)
 }
