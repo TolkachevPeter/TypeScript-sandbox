@@ -15,7 +15,7 @@ function App() {
       id: Date.now(),
       completed: false
     }
-    setTodos([newTodo, ...todos])
+    setTodos(prev => [newTodo, ...prev])
   }
 
   return( 
