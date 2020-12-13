@@ -1,6 +1,10 @@
 import React, { useRef} from 'react';
 
-export const TodoForm: React.FC = () => {
+interface TodoFormProps{
+    onAdd(title: string): void
+}
+
+export const TodoForm: React.FC<TodoFormProps> = (props: any) => {
     // const [title, setTitle] = useState<string>('')
     const ref = useRef<HTMLInputElement>(null)
 
